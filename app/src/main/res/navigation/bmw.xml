@@ -7,8 +7,14 @@
 
     <fragment
         android:id="@+id/bmwFragment"
-        android:name="com.georgcantor.wallpaperapp.ui.fragment.GalleryFragment"
+        android:name="com.georgcantor.wallpaperapp.ui.fragment.gallery.GalleryFragment"
         android:label="@string/bmw"
         tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.georgcantor.wallpaperapp.ui.fragment.favorites.FavoritesFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorites" />
 
 </navigation>

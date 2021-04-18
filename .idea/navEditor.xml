@@ -42,18 +42,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="DetailFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="200" />
-                            <option name="y" value="16" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="bmwFragment">
                     <value>
                       <LayoutPositions>
@@ -61,6 +49,18 @@
                           <Point>
                             <option name="x" value="12" />
                             <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="favoritesFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="202" />
+                            <option name="y" value="11" />
                           </Point>
                         </option>
                       </LayoutPositions>

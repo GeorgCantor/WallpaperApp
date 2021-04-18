@@ -1,4 +1,4 @@
-package com.georgcantor.wallpaperapp.ui.activity.favorites
+package com.georgcantor.wallpaperapp.ui.fragment.favorites
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,13 +10,11 @@ import kotlinx.coroutines.launch
 class FavoritesViewModel(private val repository: Repository) : ViewModel() {
 
     val favorites = MutableLiveData<List<Favorite>>()
-    val isEmpty = MutableLiveData<Boolean>()
 
     fun getFavorites() {
         viewModelScope.launch {
             val favs = repository.getFavorites()
             favorites.postValue(favs)
-            isEmpty.postValue(favs.isNullOrEmpty())
         }
     }
 

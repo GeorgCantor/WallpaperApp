@@ -9,13 +9,13 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.georgcantor.wallpaperapp.R
 import com.georgcantor.wallpaperapp.databinding.ActivityMainBinding
 import com.georgcantor.wallpaperapp.ui.activity.GalleryActivity
 import com.georgcantor.wallpaperapp.ui.activity.SearchActivity
 import com.georgcantor.wallpaperapp.ui.activity.categories.CategoriesActivity
-import com.georgcantor.wallpaperapp.ui.activity.favorites.FavoritesActivity
 import com.georgcantor.wallpaperapp.ui.activity.videos.VideosActivity
 import com.georgcantor.wallpaperapp.util.Constants.PIC_EXTRA
 import com.georgcantor.wallpaperapp.util.NetworkUtils.getNetworkLiveData
@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_mclaren -> startActivity<GalleryActivity> { putExtra(PIC_EXTRA, getString(R.string.mclaren)) }
             R.id.nav_porsche -> startActivity<GalleryActivity> { putExtra(PIC_EXTRA, getString(R.string.porsche)) }
             R.id.nav_rolls -> startActivity<GalleryActivity> { putExtra(PIC_EXTRA, getString(R.string.rolls)) }
-            R.id.nav_favorites-> startActivity<FavoritesActivity>()
+            R.id.nav_favorites-> binding.navHostContainer.findNavController().navigate(R.id.favoritesFragment)
         }
         binding.drawerLayout.closeDrawer(START)
         return true

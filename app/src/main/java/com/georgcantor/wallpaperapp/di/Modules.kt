@@ -6,10 +6,10 @@ import com.georgcantor.wallpaperapp.model.remote.ApiClient
 import com.georgcantor.wallpaperapp.repository.Repository
 import com.georgcantor.wallpaperapp.ui.activity.categories.CategoriesViewModel
 import com.georgcantor.wallpaperapp.ui.activity.detail.DetailViewModel
-import com.georgcantor.wallpaperapp.ui.activity.favorites.FavoritesViewModel
+import com.georgcantor.wallpaperapp.ui.fragment.favorites.FavoritesViewModel
 import com.georgcantor.wallpaperapp.ui.activity.main.MainViewModel
 import com.georgcantor.wallpaperapp.ui.activity.videos.VideosViewModel
-import com.georgcantor.wallpaperapp.ui.fragment.GalleryViewModel
+import com.georgcantor.wallpaperapp.ui.fragment.gallery.GalleryViewModel
 import com.georgcantor.wallpaperapp.util.Constants.MAIN_STORAGE
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel

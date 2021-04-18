@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager.VERTICAL
 import com.georgcantor.wallpaperapp.databinding.FragmentGalleryBinding
 import com.georgcantor.wallpaperapp.ui.activity.detail.DetailActivity
-import com.georgcantor.wallpaperapp.ui.fragment.GalleryAdapter
-import com.georgcantor.wallpaperapp.ui.fragment.GalleryViewModel
+import com.georgcantor.wallpaperapp.ui.fragment.gallery.GalleryAdapter
+import com.georgcantor.wallpaperapp.ui.fragment.gallery.GalleryViewModel
 import com.georgcantor.wallpaperapp.util.Constants.PIC_EXTRA
 import com.georgcantor.wallpaperapp.util.NetworkUtils.getNetworkLiveData
 import com.georgcantor.wallpaperapp.util.startActivity

@@ -1,4 +1,4 @@
-package com.georgcantor.wallpaperapp.ui.fragment
+package com.georgcantor.wallpaperapp.ui.fragment.gallery
 
 import androidx.lifecycle.ViewModel
 import androidx.paging.Pager

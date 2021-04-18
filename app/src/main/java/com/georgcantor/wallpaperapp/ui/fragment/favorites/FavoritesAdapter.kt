@@ -1,4 +1,4 @@
-package com.georgcantor.wallpaperapp.ui.activity.favorites
+package com.georgcantor.wallpaperapp.ui.fragment.favorites
 
 import android.view.LayoutInflater
 import android.view.View

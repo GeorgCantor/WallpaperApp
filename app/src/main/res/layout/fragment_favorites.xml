@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.activity.favorites.FavoritesActivity">
+    tools:context=".ui.activity.main.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pictures_recycler"
@@ -24,6 +24,7 @@
         android:text="@string/favorites_empty"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

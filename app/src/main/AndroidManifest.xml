@@ -42,7 +42,6 @@
             android:configChanges="orientation|screenSize" />
 
         <activity android:name=".ui.activity.videos.VideosActivity" />
-        <activity android:name=".ui.activity.favorites.FavoritesActivity" />
         <activity android:name=".ui.activity.GalleryActivity" />
         <activity android:name=".ui.activity.categories.CategoriesActivity" />
 
