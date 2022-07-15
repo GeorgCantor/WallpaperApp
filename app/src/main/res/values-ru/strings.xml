@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Wallpapers</string>
+    <string name="error_internet_title">Ошибка соединения</string>
+    <string name="error_internet_message">Проверьте подключение и повторите попытку еще раз</string>
+    <string name="error_internet_button">Повторить попытку</string>
+    <string name="error_something_wrong_title">Что-то пошло не так</string>
+    <string name="error_something_wrong_message">Попробуйте еще раз</string>
     <string name="no_internet">Hет интернет соединения</string>
     <string name="something_went_wrong">Что-то пошло не так…</string>
     <string name="not_found">Ничего не найдено:(</string>

@@ -1,13 +1,14 @@
 buildscript {
-    ext.kotlin_version = "1.6.10"
-    ext.dagger_version = "2.38.1"
+    ext.kotlin_version = "1.6.21"
+    ext.dagger_version = '2.40.1'
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.0'
+        classpath 'com.android.tools.build:gradle:7.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
     }
@@ -17,6 +18,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
         jcenter()
     }
 }

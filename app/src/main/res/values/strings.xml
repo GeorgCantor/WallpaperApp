@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Wallpapers</string>
+    <string name="error_internet_title">Connection error</string>
+    <string name="error_internet_message">Check your connection and try again</string>
+    <string name="error_internet_button">Retry</string>
+    <string name="error_something_wrong_title">Something went wrong</string>
+    <string name="error_something_wrong_message">Try again</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="by" translatable="false">By:</string>
