@@ -3,7 +3,6 @@ package com.georgcantor.wallpaperapp.di
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import com.georgcantor.wallpaperapp.model.local.FavDatabase
 import com.georgcantor.wallpaperapp.model.remote.ApiClient
 import com.georgcantor.wallpaperapp.util.Constants.MAIN_STORAGE
 import dagger.Module
@@ -16,10 +15,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
-    @Singleton
-    @Provides
-    fun providesDatabase(@ApplicationContext context: Context) = FavDatabase.buildDefault(context).dao()
 
     @Singleton
     @Provides

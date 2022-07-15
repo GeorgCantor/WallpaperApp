@@ -14,8 +14,8 @@ android {
         applicationId "com.georgcantor.wallpaperapp"
         minSdkVersion 21
         targetSdkVersion 32
-        versionCode 100
-        versionName "1.3.60"
+        versionCode 101
+        versionName "1.3.61"
     }
 
     buildTypes {
@@ -32,7 +32,6 @@ android {
         it.buildConfigField "String", "PEXELS_API_TOKEN", "\"your_token\""
         it.buildConfigField 'String', 'YOUTUBE_URL', "\"https://www.googleapis.com/youtube/v3/playlistItems?key=YOUR_KEY&fields=items&part=snippet&maxResults=60\""
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -67,16 +66,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.38.1"
     kapt "com.google.dagger:hilt-compiler:2.38.1"
 
-    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
-
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "com.google.code.gson:gson:2.8.9"
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
-
-    implementation "androidx.room:room-runtime:2.4.2"
-    kapt "androidx.room:room-compiler:2.4.2"
-    implementation "androidx.room:room-ktx:2.4.2"
 
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'

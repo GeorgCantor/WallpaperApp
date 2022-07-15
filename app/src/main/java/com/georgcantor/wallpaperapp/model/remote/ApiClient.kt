@@ -28,7 +28,6 @@ object ApiClient {
         }
             .addInterceptor(CacheInterceptor(context))
             .addInterceptor(loggingInterceptor)
-            .addInterceptor(AuthInterceptor())
             .cache(Cache(File(context.cacheDir, "ResponsesCache"), (30 * 1024 * 1024).toLong()))
             .connectTimeout(20, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)

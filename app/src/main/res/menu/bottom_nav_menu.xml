@@ -3,17 +3,14 @@
 
     <item
         android:id="@+id/nav_bmw"
-        android:icon="@drawable/bmw_icon"
         android:title="@string/bmw" />
 
     <item
         android:id="@+id/nav_audi"
-        android:icon="@drawable/audi"
         android:title="@string/audi" />
 
     <item
         android:id="@+id/nav_mercedes"
-        android:icon="@drawable/mercedes"
         android:title="@string/mercedes" />
 
 </menu>

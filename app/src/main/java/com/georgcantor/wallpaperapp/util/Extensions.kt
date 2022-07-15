@@ -11,7 +11,6 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment.DIRECTORY_PICTURES
 import android.os.Environment.getExternalStoragePublicDirectory
-import android.provider.MediaStore
 import android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
 import android.provider.MediaStore.MediaColumns.*
 import android.view.LayoutInflater
@@ -36,12 +35,13 @@ import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.request.transition.Transition
 import com.georgcantor.wallpaperapp.R
 import com.georgcantor.wallpaperapp.databinding.DialogStandartBinding
-import com.georgcantor.wallpaperapp.model.remote.response.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.io.*
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStream
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
@@ -49,29 +49,6 @@ import java.net.UnknownHostException
 inline fun <reified T : Activity> Activity.startActivity(block: Intent.() -> Unit = {}) {
     startActivity(Intent(this, T::class.java).apply(block))
     overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left)
-}
-
-fun Activity.getImageUri(pic: CommonPic?): Uri {
-    val bitmap = getBitmap(pic)
-    val bytes = ByteArrayOutputStream()
-    bitmap?.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-    val path = MediaStore.Images.Media.insertImage(
-        contentResolver, bitmap, "Title", null
-    )
-    return Uri.parse(path)
-}
-
-fun Activity.getBitmap(pic: CommonPic?): Bitmap? {
-    var bitmap: Bitmap? = null
-    try {
-        bitmap = Glide.with(this)
-            .asBitmap()
-            .load(pic?.imageURL)
-            .submit()
-            .get()
-    } catch (e: IOException) {
-    }
-    return bitmap
 }
 
 fun Context.isNetworkAvailable() = (getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager?)
@@ -238,17 +215,6 @@ fun View.gone() { visibility = GONE }
 inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
     crossinline bindingInflater: (LayoutInflater) -> T
 ) = lazy(LazyThreadSafetyMode.NONE) { bindingInflater.invoke(layoutInflater) }
-
-fun Throwable.parseError(): ParsedError {
-    return when {
-        isNetworkError() -> NetworkError(
-            NETWORK_ERROR_CODE, NETWORK_ERROR_TITLE, NETWORK_ERROR_MESSAGE, NETWORK_ERROR_BUTTON
-        )
-        else -> return GeneralError(
-            DEFAULT_ERROR_CODE, DEFAULT_ERROR_TITLE, DEFAULT_ERROR_MESSAGE, DEFAULT_ERROR_BUTTON
-        )
-    }
-}
 
 private fun Throwable.isNetworkError() = when (this) {
     is ConnectException, is UnknownHostException, is SocketTimeoutException -> true

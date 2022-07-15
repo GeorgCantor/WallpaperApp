@@ -18,10 +18,6 @@
         <item name="itemBackground">@color/black</item>
     </style>
 
-    <style name="AppTheme.Launcher" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/splash</item>
-    </style>
-
     <style name="NavigationViewTheme" parent="AppTheme">
         <item name="android:listDivider">@color/gray</item>
         <item name="android:textColorSecondary">@color/white</item>
