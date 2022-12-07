@@ -2,7 +2,7 @@
 An android app for viewing and downloading cool wallpapers ad-free as well as cost-free
 
 ![ss1](https://i.postimg.cc/Fz7TJhPp/readmeimg.png) 
-[![Wallpapers-Google-Play-screen.png](https://i.postimg.cc/25rFJJc0/Wallpapers-Google-Play-screen.png)](https://postimg.cc/YvDWLXwF)
+![Wallpapers-Google-Play-screen.png](https://i.postimg.cc/25rFJJc0/Wallpapers-Google-Play-screen.png)
 
 </br>
 
