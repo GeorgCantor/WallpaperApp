@@ -2,7 +2,7 @@
 An android app for viewing and downloading cool wallpapers ad-free as well as cost-free
 
 ![ss1](https://i.postimg.cc/Fz7TJhPp/readmeimg.png) 
-![2022-12-07-223408.png](https://i.postimg.cc/L8H2JLmQ/2022-12-07-223408.png)
+[![2022-12-07-223408.png](https://i.postimg.cc/VNPp3Ffs/2022-12-07-223408.png)](https://postimg.cc/75XKz0Jj)
 
 </br>
 
